@@ -41,7 +41,7 @@ const Transaction = {
         let income = 0;
 
         Transaction.all.forEach(transaction => {
-            if(transaction.amount > 0) {
+            if (transaction.amount > 0) {
                 income += transaction.amount;
             } 
         })
@@ -52,7 +52,7 @@ const Transaction = {
         let expense = 0;
         
         Transaction.all.forEach(transaction => {
-            if(transaction.amount < 0) {
+            if (transaction.amount < 0) {
                 expense += transaction.amount;
             } 
         })
@@ -114,7 +114,7 @@ const Utils = {
     },
     formatAmount(value) {
         value = Number(value) * 100
-        return value
+        return Math.round(value)
 
     },
     formatCurrency(value) {
